@@ -16,11 +16,11 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
         <BrowserRouter>
-                <div>
-                    <Route path="/" component={Header} />
-                    <Route path="/" component={Landing} />
-                    <Route path="/" component={Filler} />
-                </div>
+            <div>
+                <Route path="/" component={Header} />
+                <Route path="/" component={Landing} />
+                <Route path="/" component={Filler} />
+            </div>
         </BrowserRouter>
     </Provider>
     , document.querySelector('.container'));
