@@ -1,0 +1,97 @@
+body {
+	font-family: 'Josefin Slab', serif;
+	text-align: center;
+	margin: auto;
+	min-height: 100%;
+	max-width: 100%;
+}
+/*// START Header styles //*/
+#header {
+	min-width: 200px !important;
+}
+
+#header .right.menu {
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+
+#header .ui.menu {
+    font-family: 'Josefin Slab', serif;
+	font-size: 150%;
+}
+
+.top-menu {
+	border-radius: 0px;
+	background-color: rgba(255, 255, 255, 0) !important;
+	width: 100%;
+}
+
+.full-size {
+	display: inline-block !important;
+	height: 40px;
+}
+
+
+.menu {
+	height: 40px;
+}
+
+#header .ui.grid {
+	margin: 0px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+	opacity: 0.9;
+	margin-top: 40px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+	color: #F8F8F8;
+    padding: 16px 8px 16px 32px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/*// END Header Styles //*/
+
+/*// START Landing Styles //*/
+
+#landing {
+	height: 100vh;
+	width: 100%;
+	margin: -40px 0px 0px;
+	background-image: url("/public/Rockwood-Live.jpg");
+	background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+#band-name {
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%);
+	color: white;
+	width: 50%;
+	max-width: 250px;
+}
