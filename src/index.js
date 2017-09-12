@@ -7,7 +7,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import reducers from './reducers';
 
 import Header from './components/header';
-import Filler from './components/filler';
 import Landing from './components/landing';
 import Overlay from './components/overlay';
 import Logo from './components/logo';
