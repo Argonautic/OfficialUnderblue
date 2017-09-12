@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
-import { Menu, Image, Grid, Icon, Button, Container} from 'semantic-ui-react';
+import { Menu, Image, Grid, Icon, Button, Visibility} from 'semantic-ui-react';
 
 export default class Header extends Component {
     constructor(props) {
         super(props);
 
+        const isHomepage = this.props.match.url === '/';
+
         this.state = {
             sidebarWidth: 0,
+            backgroundColor: isHomepage ? 'rgba(255, 255, 255, 0)' : "#090909",
+            opacity: isHomepage ? null : '0.8',
         };
+
+        if (isHomepage) {
+            window.addEventListener("scroll", () => {
+                this.toggleHeaderOpacity()
+            });
+        }
+
+        this.toggleSidebar = this.toggleSidebar.bind(this);
+        this.toggleHeaderOpacity = this.toggleHeaderOpacity.bind(this);
     }
 
     toggleSidebar() {
@@ -34,7 +47,22 @@ export default class Header extends Component {
         );
     }
 
+    toggleHeaderOpacity() {
+        if (this.state.backgroundColor === "#090909" && window.pageYOffset < 100) {
+            this.setState({
+                backgroundColor: 'rgba(255, 255, 255, 0)',
+                opacity: null,
+            });
+        } else if (this.state.backgroundColor !== "#090909" && window.pageYOffset >= 100) {
+            this.setState({
+                backgroundColor: "#090909",
+                opacity: '0.8',
+            });
+        }
+    }
+
     render() {
+
         const navItems = [
             { key: 'bio', name: 'Bio', icon: "users" },
             { key: 'music', name: 'Music', icon: "music"  },
@@ -45,9 +73,9 @@ export default class Header extends Component {
 
         return (
             <div id="header">
-                <Grid style={{width: 300}}>
-                    <Grid.Row only="computer tablet" className="full-size">
-                        <Menu fluid className="top-menu" inverted fixed="top">
+                <Grid>
+                    <Grid.Row only="computer" className="full-size">
+                        <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
                             <Menu.Item style={{"paddingLeft": "10px", "paddingRight": "10px"}}>
                                 <Image
                                     src="public/logo.png"
@@ -67,8 +95,8 @@ export default class Header extends Component {
                         </Menu>
                     </Grid.Row>
 
-                    <Grid.Row only="mobile" className="full-size">
-                        <Menu fluid className="top-menu" inverted fixed="top">
+                    <Grid.Row only="mobile tablet" className="full-size">
+                        <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
                             <Menu.Item style={{"paddingLeft": "6px", "paddingRight": "px"}}>
                                 <Image
                                     src="public/logo.png"
@@ -81,7 +109,7 @@ export default class Header extends Component {
                             {this.getSocialIcons('small')}
 
                             <Menu.Item position="right" style={{"verticalAlign": "middle"}}>
-                                <Button icon onClick={this.toggleSidebar.bind(this)} style={{"backgroundColor": "rgba(255, 255, 255, 0)"}}>
+                                <Button icon onClick={this.toggleSidebar} style={{ backgroundColor: "rgba(255, 255, 255, 0)"}}>
                                     <Icon inverted size="small" name="content" />
                                 </Button>
                             </Menu.Item>
