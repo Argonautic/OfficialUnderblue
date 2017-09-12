@@ -1,3 +1,6 @@
+import Perf from 'react-addons-perf';
+Perf.start();
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -27,3 +30,6 @@ ReactDOM.render(
         </BrowserRouter>
     </Provider>
     , document.querySelector('.container'));
+
+Perf.stop();
+Perf.printWasted();

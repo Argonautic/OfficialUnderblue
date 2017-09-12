@@ -6,7 +6,7 @@ export default class ImageModal extends Component {
         return (
             <Modal basic trigger={<Image src={this.props.src} />}>
                 <Modal.Content image>
-                    <Image dimmer={true} wrapped src={this.props.src} />
+                    <Image wrapped src={this.props.src} />
                 </Modal.Content>
             </Modal>
         );
