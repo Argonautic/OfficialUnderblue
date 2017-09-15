@@ -1,0 +1,22 @@
+#bandcamp {
+	color: #CDCDCD;
+	transition: 0.2s;
+}
+
+#bandcamp:hover {
+	color: #2F44C6
+}
+
+#home-soundcloud {
+	margin-top: 60vh;
+}
+
+#home-player {
+	min-width: 320px;
+}
+
+#homepage-pics img:hover {
+	cursor: pointer;
+	opacity: 0.7;
+	transition: 0.1s;
+}

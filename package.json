@@ -1,15 +1,14 @@
 {
-  "name": "redux-simple-starter",
-  "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "name": "OfficialUnderblue",
+  "version": "0.1.0",
+  "description": "Official website for the NYC band Underblue",
   "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "repository": "git@github.com:Argonautic/OfficialUnderblue.git",
   "scripts": {
-    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "build": "webpack --config webpack.dev.js",
+    "dev": "webpack-dev-server",
     "postinstall": "webpack -p",
-    "start": "node server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,13 +19,22 @@
     "babel-preset-react": "^6.24.1",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
-    "jquery": "^2.2.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "image-webpack-loader": "^3.4.2",
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "react-addons-perf": "^15.4.2",
     "react-addons-test-utils": "^0.14.7",
-    "webpack": "^1.15.0",
-    "webpack-dev-server": "^1.16.5"
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.6",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-dev-server": "^2.7.1",
+    "webpack-merge": "^4.1.0"
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",

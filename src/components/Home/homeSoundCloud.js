@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { Header, Divider, Container, Image, Grid } from 'semantic-ui-react';
-import ImageModal from './imageModal';
+import ImageModal from '../Shared/imageModal';
+
+import AnuDrumming from '../../../public/landingPhotos/AnuDrumming.jpg';
+import CouchShot from '../../../public/landingPhotos/CouchShot.jpg';
+import KimBaxter from '../../../public/landingPhotos/KimBaxter.jpg';
+import RockwoodFrontShot from '../../../public/landingPhotos/RockwoodFrontShot.jpg';
+import SideGuitars from '../../../public/landingPhotos/SideGuitars.jpg';
+import SleepingBo from '../../../public/landingPhotos/SleepingBo.jpg';
+
+import '../../../public/style/homeSoundCloud.css';
 
 export default class HomeSoundCloud extends Component {
     testLog() {
@@ -23,12 +32,12 @@ export default class HomeSoundCloud extends Component {
                         <Grid id="homepage-pics" columns={3}>
                             <Grid.Row>
                                 <Image.Group size="small">
-                                    <ImageModal src="public/landingPhotos/CouchShot.jpg" />
-                                    <ImageModal src="public/landingPhotos/RockwoodFrontShot.jpg" />
-                                    <ImageModal src="public/landingPhotos/SideGuitars.jpg" />
-                                    <ImageModal src="public/landingPhotos/SleepingBo.jpg" />
-                                    <ImageModal src="public/landingPhotos/KimBaxter.jpg" />
-                                    <ImageModal src="public/landingPhotos/AnuDrumming.jpg" />
+                                    <ImageModal src={CouchShot} />
+                                    <ImageModal src={RockwoodFrontShot} />
+                                    <ImageModal src={SideGuitars} />
+                                    <ImageModal src={SleepingBo} />
+                                    <ImageModal src={KimBaxter} />
+                                    <ImageModal src={AnuDrumming} />
                                 </Image.Group>
                                 {/*<Grid.Column>
                                     <ImageModal src="public/landingPhotos/CouchShot.jpg" />

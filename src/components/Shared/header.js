@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import { Menu, Image, Grid, Icon, Button, Visibility} from 'semantic-ui-react';
+import { Menu, Image, Grid, Icon, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+
+import Logo from '../../../public/logo.png';
+import '../../../public/style/header.css';
 
 export default class Header extends Component {
     constructor(props) {
@@ -64,7 +68,7 @@ export default class Header extends Component {
     render() {
 
         const navItems = [
-            { key: 'bio', name: 'Bio', icon: "users" },
+            { key: 'bios', name: 'Bios', icon: "users" },
             { key: 'music', name: 'Music', icon: "music"  },
             { key: 'tour', name: 'Tour', icon: "map outline" },
             { key: 'photos', name: 'Photos', icon: "picture" },
@@ -78,7 +82,7 @@ export default class Header extends Component {
                         <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
                             <Menu.Item style={{"paddingLeft": "10px", "paddingRight": "10px"}}>
                                 <Image
-                                    src="public/logo.png"
+                                    src={Logo}
                                     as="a"
                                     href="/"
                                     size="small"
@@ -99,7 +103,7 @@ export default class Header extends Component {
                         <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
                             <Menu.Item style={{"paddingLeft": "6px", "paddingRight": "px"}}>
                                 <Image
-                                    src="public/logo.png"
+                                    src={Logo}
                                     as="a"
                                     href="/"
                                     size="tiny"
@@ -119,7 +123,7 @@ export default class Header extends Component {
 
                 <div id="mySidenav" className="sidenav" style={{'width': this.state.sidebarWidth}}>
                     {navItems.map(item => {
-                        return <a href="#" key={item.key}><Icon name={item.icon} />{item.name}</a>
+                        return <Link to={item.key} key={item.key}><Icon name={item.icon} />{item.name}</Link>
                     })}
                 </div>
             </div>

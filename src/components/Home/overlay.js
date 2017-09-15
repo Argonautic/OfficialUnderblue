@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import '../../../public/style/overlay.css';
+
 export default class Overlay extends Component {
 
     constructor(props) {
