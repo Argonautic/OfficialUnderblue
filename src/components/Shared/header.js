@@ -89,7 +89,7 @@ export default class Header extends Component {
             { key: 'music', name: 'Music', icon: "music"  },
             { key: 'tour', name: 'Tour', icon: "map outline" },
             { key: 'photos', name: 'Photos', icon: "picture" },
-            { key: 'press', name: 'Press', icon: "newspaper" },
+            { key: 'videos', name: 'Videos', icon: "video" },
         ];
 
         return (

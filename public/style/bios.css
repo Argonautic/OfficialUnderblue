@@ -9,3 +9,9 @@
 #bios-tab {
     height: 40px;
 }
+
+#bio-box {
+    text-align: left;
+    line-height: 1.4;
+    font-size: 20px;
+}
