@@ -1,5 +1,5 @@
-import Perf from 'react-addons-perf';
-Perf.start();
+/*import Perf from 'react-addons-perf';
+Perf.start();*/
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -37,5 +37,5 @@ ReactDOM.render(
     </BrowserRouter>
     , document.querySelector('.container'));
 
-Perf.stop();
-Perf.printWasted();
+/*Perf.stop();
+Perf.printWasted();*/
