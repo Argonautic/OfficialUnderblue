@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import { Container, Image, Segment } from 'semantic-ui-react';
 
 import BioImage from './bioImage';
-import StaticOverlay from '../Shared/staticOverlay';
 
-import PortraitAnu from '../../../public/BioAssets/PortraitAnu.jpg'
-import PortraitJon from '../../../public/BioAssets/PortraitJon.jpg'
-import PortraitKim from '../../../public/BioAssets/PortraitKim.jpg'
-import PortraitSimon from '../../../public/BioAssets/PortraitSimon.jpg'
+import PortraitAnu from '../../../public/BioAssets/PortraitAnu1x1.jpg'
+import PortraitJon from '../../../public/BioAssets/PortraitJon1x1.jpg'
+import PortraitKim from '../../../public/BioAssets/PortraitKim1x1.jpg'
+import PortraitSimon from '../../../public/BioAssets/PortraitSimon1x1.jpg'
 import { bioAnu, bioJon, bioKim, bioSimon, bioIlvi } from '../../../public/BioAssets/IndividualBios';
 import '../../../public/style/bios.css';
 
@@ -71,7 +70,7 @@ export default class Bios extends Component {
                         </p>
                     </div>
 
-                    <Image.Group size="medium" style={{marginTop: "10px"}}>
+                    <Image.Group size="small" style={{marginTop: "10px"}}>
                         {this.renderImages()}
                     </Image.Group>
 

@@ -1,8 +1,13 @@
+#header {
+    z-index: 20;
+}
+
 #header .right.menu {
 	padding-top: 20px;
 }
 
 #header .ui.menu {
+    z-index: 20;
     font-family: 'Open Sans', serif;
 	font-size: 150%;
 }

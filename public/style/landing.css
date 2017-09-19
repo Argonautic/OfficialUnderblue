@@ -4,7 +4,7 @@
 	z-index: -10;
 	height: 100vh;
 	width: 100vw;
-	background-image: url("../Rockwood-Live.jpg");
+	background-image: url("../Rockwood-Live-60.jpg");
 	background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
@@ -12,7 +12,9 @@
 }
 
 #band-name {
+	z-index: 30;
 	width: 50%;
 	max-width: 250px;
 	margin-top: 30vh;
+	transition: 1s;
 }

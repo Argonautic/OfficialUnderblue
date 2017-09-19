@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 
+import Welcome from './welcome';
+import Logo from './logo';
 import Landing from './landing';
 import Overlay from './overlay';
-import Logo from './logo';
 import HomeSoundCloud from './homeSoundCloud'
 
 export default class Home extends Component {
     render() {
         return (
             <div>
+                <Welcome>
+                    {/*<StockBackground backgroundId="stock-background-landing" />
+                    <StaticOverlay backgroundId="static-overlay-landing" />
+                    */}
+                </Welcome>
+                <Logo />
                 <Landing />
                 <Overlay />
-                <Logo />
                 <HomeSoundCloud />
 
                 <div style={{marginTop: "30px"}}>
