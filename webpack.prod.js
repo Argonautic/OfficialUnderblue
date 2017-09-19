@@ -2,8 +2,6 @@ const merge = require('webpack-merge');
 const webpack = require('webpack');
 const common = require('./webpack.config.js');
 
-console.log('hi');
-
 module.exports = merge(common, {
     plugins: [
         new webpack.DefinePlugin({
