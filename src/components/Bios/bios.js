@@ -16,13 +16,14 @@ export default class Bios extends Component {
         super(props);
 
         this.bandBios = new Map();
-        this.bandBios.set("Anu", {src: PortraitAnu, bio: bioAnu});
-        this.bandBios.set("Jon", {src: PortraitJon, bio: bioJon});
-        this.bandBios.set("Kim", {src: PortraitKim, bio: bioKim});
-        this.bandBios.set("Simon", {src: PortraitSimon, bio: bioSimon});
+        this.bandBios.set("Anu McPherson", {src: PortraitAnu, bio: bioAnu});
+        this.bandBios.set("Jonathan Zhou", {src: PortraitJon, bio: bioJon});
+        this.bandBios.set("Kimberly Torres", {src: PortraitKim, bio: bioKim});
+        this.bandBios.set("Simon Cheong", {src: PortraitSimon, bio: bioSimon});
 
         this.state = {
-            bioText: this.bandBios.get('Anu').bio
+            bioMember: "Anu McPherson",
+            bioText: bioAnu
         };
 
         this.onImageClick = this.onImageClick.bind(this);
@@ -30,7 +31,10 @@ export default class Bios extends Component {
     }
 
     onImageClick(name) {
-        this.setState({ bioText: this.bandBios.get(name).bio })
+        this.setState({
+            bioMember: name,
+            bioText: this.bandBios.get(name).bio
+        })
     }
 
     renderImages() {
@@ -67,11 +71,12 @@ export default class Bios extends Component {
                         </p>
                     </div>
 
-                    <Image.Group size="medium">
+                    <Image.Group size="medium" style={{marginTop: "10px"}}>
                         {this.renderImages()}
                     </Image.Group>
 
                     <Segment inverted padded stacked id="bio-box">
+                        <h2 className="white-color" style={{textAlign: "center", marginBottom: "10px"}}>{this.state.bioMember}</h2>
                         {this.state.bioText}
                     </Segment>
                 </div>

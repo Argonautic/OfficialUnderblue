@@ -1,5 +1,5 @@
 #site {
-	font-family: 'Josefin Slab', serif !important;
+	font-family: 'Open Sans', serif !important;
 	color: white;
 	text-align: center;
 	margin: auto;
@@ -9,4 +9,13 @@
 	position: relative;
     margin: auto;
     width: 50%;
+}
+
+.top-margin {
+	margin-Top: 40px;
+}
+
+.white-color {
+    font-family: "Open Sans", sans-serif !important;
+    color: floralwhite !important;
 }

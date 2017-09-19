@@ -20,7 +20,7 @@ export default class HomeSoundCloud extends Component {
         return (
             <Container id="home-soundcloud">
                 <Header size="huge" inverted color="grey">
-                    <a id="bandcamp" href="https://underblue.bandcamp.com/album/passenger">Download Underblue's new EP, Passenger</a>
+                    <a target="_blank" id="bandcamp" href="https://underblue.bandcamp.com/album/passenger">Download Underblue's new EP, Passenger</a>
                 </Header>
                 <Divider inverted /><Divider inverted />
                 <br />

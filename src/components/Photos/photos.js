@@ -6,7 +6,7 @@ import '../../../public/style/photos.css';
 export default class Photos extends Component {
     render() {
         return (
-            <Container>
+            <Container className="top-margin">
                 <div id="insta-photos">
                     {/*<iframe
                         id="insta-frame"
