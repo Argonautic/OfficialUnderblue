@@ -30,7 +30,7 @@
 .sidenav {
     height: 100%; /* 100% Full-height */
 	opacity: 0.9;
-	margin-top: 40px;
+	padding-top: 45px;
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;

@@ -11,11 +11,9 @@ export default class Overlay extends Component {
             opacity: 0,
         };
 
-        window.addEventListener("scroll", () => {
-            this.toggleLandingOpacity()
-        });
-
         this.toggleLandingOpacity = this.toggleLandingOpacity.bind(this);
+
+        window.addEventListener("scroll", this.toggleLandingOpacity);
     }
 
     toggleLandingOpacity() {
@@ -24,6 +22,10 @@ export default class Overlay extends Component {
         } else if (this.state.opacity !== 0.8 && window.pageYOffset >= 100) {
             this.setState({ opacity: 0.8 });
         }
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.toggleLandingOpacity);
     }
 
     render() {

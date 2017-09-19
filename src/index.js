@@ -6,19 +6,27 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import Header from './components/Shared/header';
+import Footer from './components/Shared/footer';
 import Home from './components/Home/home';
 import Bios from './components/Bios/bios';
+import Photos from './components/Photos/photos';
+import StockBackground from './components/Shared/stockBackground';
 
 import '../public/style/style.css';
+import StaticOverlay from "./components/Shared/staticOverlay";
 
 ReactDOM.render(
     <BrowserRouter>
         <div id="site">
-            <Route path="/" component={Header} />
+            <StockBackground />
+            <StaticOverlay />
+            <Route component={Header} />
             <Switch>
                 <Route path="/bios" component={Bios} />
+                <Route path="/photos" component={Photos} />
                 <Route path="/" component={Home} />
             </Switch>
+            <Route component={Footer} />
         </div>
     </BrowserRouter>
     , document.querySelector('.container'));

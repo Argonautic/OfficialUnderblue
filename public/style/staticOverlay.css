@@ -1,0 +1,10 @@
+#static-overlay {
+	position: fixed;
+	top: 0;
+	z-index: -14;
+	height: 100vh;
+    width: 100vw;
+    background-color: #090909;
+    transform: skewY(-6deg);
+    opacity: 0.8;
+}

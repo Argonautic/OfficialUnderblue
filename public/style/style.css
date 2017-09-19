@@ -4,3 +4,9 @@
 	text-align: center;
 	margin: auto;
 }
+
+.center {
+	position: relative;
+    margin: auto;
+    width: 50%;
+}

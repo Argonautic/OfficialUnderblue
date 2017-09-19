@@ -12,19 +12,18 @@ export default class Header extends Component {
         const isHomepage = this.props.match.url === '/';
 
         this.state = {
+            isHomepage,
             sidebarWidth: 0,
             backgroundColor: isHomepage ? 'rgba(255, 255, 255, 0)' : "#090909",
             opacity: isHomepage ? null : '0.8',
         };
 
-        if (isHomepage) {
-            window.addEventListener("scroll", () => {
-                this.toggleHeaderOpacity()
-            });
-        }
-
         this.toggleSidebar = this.toggleSidebar.bind(this);
         this.toggleHeaderOpacity = this.toggleHeaderOpacity.bind(this);
+
+        if (isHomepage) {
+            window.addEventListener("scroll", this.toggleHeaderOpacity);
+        }
     }
 
     toggleSidebar() {
@@ -41,14 +40,32 @@ export default class Header extends Component {
         return (
             icons.map(icon => {
                 return (
-                    <Menu.Item style={{"padding": "13px 5px"}}>
+                    <Menu.Item key={icon.key} style={{"padding": "13px 5px"}}>
                         <a href={icon.link}>
-                            <Icon size={size} key={icon.key} name={icon.name} />
+                            <Icon size={size} name={icon.name} />
                         </a>
                     </Menu.Item>
-                )
+                );
             })
         );
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (this.state.isHomepage && nextProps.location.pathname !== '/') {
+            window.removeEventListener('scroll', this.toggleHeaderOpacity);
+            this.setState({
+                isHomepage: false,
+                backgroundColor: "#090909",
+                opacity: '0.8',
+            });
+        } else if (!this.state.isHomepage && nextProps.location.pathname === '/') {
+            window.addEventListener('scroll', this.toggleHeaderOpacity);
+            this.setState ({
+                isHomepage: true,
+                backgroundColor: 'rgba(255, 255, 255, 0)',
+                opacity: null,
+            })
+        }
     }
 
     toggleHeaderOpacity() {
@@ -80,11 +97,9 @@ export default class Header extends Component {
                 <Grid>
                     <Grid.Row only="computer" className="full-size">
                         <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
-                            <Menu.Item style={{"paddingLeft": "10px", "paddingRight": "10px"}}>
+                            <Menu.Item as={Link} to='/' style={{"paddingLeft": "10px", "paddingRight": "10px"}}>
                                 <Image
                                     src={Logo}
-                                    as="a"
-                                    href="/"
                                     size="small"
                                 />
                             </Menu.Item>
@@ -93,7 +108,7 @@ export default class Header extends Component {
 
                             <Menu.Menu position="right">
                                 {navItems.map(item => {
-                                    return <Menu.Item className="menu-item" as="a" key={item.key} name={item.name} />
+                                    return <Menu.Item className="menu-item" as={Link} to={item.key} key={item.key} name={item.name} />
                                 })}
                             </Menu.Menu>
                         </Menu>
@@ -101,11 +116,9 @@ export default class Header extends Component {
 
                     <Grid.Row only="mobile tablet" className="full-size">
                         <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
-                            <Menu.Item style={{"paddingLeft": "6px", "paddingRight": "px"}}>
+                            <Menu.Item as={Link} to='/' style={{"paddingLeft": "6px", "paddingRight": "px"}}>
                                 <Image
                                     src={Logo}
-                                    as="a"
-                                    href="/"
                                     size="tiny"
                                 />
                             </Menu.Item>
@@ -118,7 +131,7 @@ export default class Header extends Component {
                                 </Button>
                             </Menu.Item>
                         </Menu>
-                </Grid.Row>
+                    </Grid.Row>
                 </Grid>
 
                 <div id="mySidenav" className="sidenav" style={{'width': this.state.sidebarWidth}}>

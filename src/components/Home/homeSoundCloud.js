@@ -39,18 +39,6 @@ export default class HomeSoundCloud extends Component {
                                     <ImageModal src={KimBaxter} />
                                     <ImageModal src={AnuDrumming} />
                                 </Image.Group>
-                                {/*<Grid.Column>
-                                    <ImageModal src="public/landingPhotos/CouchShot.jpg" />
-                                </Grid.Column>
-                                <Grid.Column>
-                                    <ImageModal src="public/landingPhotos/RockwoodFrontShot.jpg" />
-                                </Grid.Column>
-                                <Grid.Column>
-                                    <ImageModal src="public/landingPhotos/SideGuitars.jpg" />
-                                </Grid.Column>
-                                <Grid.Column>
-                                    <ImageModal src="public/landingPhotos/SleepingBo.jpg" />
-                                </Grid.Column>*/}
                             </Grid.Row>
                         </Grid>
                     </Grid.Column>
