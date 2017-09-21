@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Reveal, Image } from 'semantic-ui-react';
 
-import footerImage from '../../../public/footerImage.png';
+import footerImage from '../../../assets/footerImage.png';
 
 export default class Footer extends Component {
     render() {

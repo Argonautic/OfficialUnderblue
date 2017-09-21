@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { Header, Divider, Container, Image, Grid } from 'semantic-ui-react';
 import ImageModal from '../Shared/imageModal';
 
-import AnuDrumming from '../../../public/landingPhotos/AnuDrumming.jpg';
-import CouchShot from '../../../public/landingPhotos/CouchShot.jpg';
-import KimBaxter from '../../../public/landingPhotos/KimBaxter.jpg';
-import RockwoodFrontShot from '../../../public/landingPhotos/RockwoodFrontShot.jpg';
-import SideGuitars from '../../../public/landingPhotos/SideGuitars.jpg';
-import SleepingBo from '../../../public/landingPhotos/SleepingBo.jpg';
+import AnuDrumming from '../../../assets/landingPhotos/AnuDrumming.jpg';
+import CouchShot from '../../../assets/landingPhotos/CouchShot.jpg';
+import KimBaxter from '../../../assets/landingPhotos/KimBaxter.jpg';
+import RockwoodFrontShot from '../../../assets/landingPhotos/RockwoodFrontShot.jpg';
+import SideGuitars from '../../../assets/landingPhotos/SideGuitars.jpg';
+import SleepingBo from '../../../assets/landingPhotos/SleepingBo.jpg';
 
-import '../../../public/style/homeSoundCloud.css';
+import '../../../assets/style/homeSoundCloud.css';
 
 export default class HomeSoundCloud extends Component {
     testLog() {

@@ -8,13 +8,12 @@ import HomeSoundCloud from './homeSoundCloud'
 
 export default class Home extends Component {
     render() {
+        let renderWelcome;
+        this.props.location.state ? renderWelcome = false : renderWelcome = true;
+
         return (
             <div>
-                <Welcome>
-                    {/*<StockBackground backgroundId="stock-background-landing" />
-                    <StaticOverlay backgroundId="static-overlay-landing" />
-                    */}
-                </Welcome>
+                {renderWelcome && <Welcome />}
                 <Logo />
                 <Landing />
                 <Overlay />

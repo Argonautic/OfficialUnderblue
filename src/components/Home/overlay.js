@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../../public/style/overlay.css';
+import '../../../assets/style/overlay.css';
 
 export default class Overlay extends Component {
 

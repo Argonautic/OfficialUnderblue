@@ -1,6 +1,6 @@
 {
   "name": "OfficialUnderblue",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "Official website for the NYC band Underblue",
   "main": "index.js",
   "repository": "git@github.com:Argonautic/OfficialUnderblue.git",
@@ -33,7 +33,8 @@
     "webpack": "^3.5.6",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.7.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",

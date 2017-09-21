@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Image } from 'semantic-ui-react';
 
-import Logo from '../../../public/logo.png';
+import Logo from '../../../assets/logo.png';
+import '../../../assets/style/logo.css'
 
 export default class Landing extends Component {
     /*constructor(props) {

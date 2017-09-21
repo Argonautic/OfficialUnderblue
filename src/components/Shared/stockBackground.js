@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../../public/style/stockBackground.css'
+import '../../../assets/style/stockBackground.css'
 
 export default class StockBackground extends Component {
     /*constructor(props) {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../../public/style/staticOverlay.css';
+import '../../../assets/style/staticOverlay.css';
 
 export default class StaticOverlay extends Component {
     /*constructor(props) {

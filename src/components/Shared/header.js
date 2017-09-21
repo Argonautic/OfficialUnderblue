@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Menu, Image, Grid, Icon, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-import Logo from '../../../public/logo.png';
-import '../../../public/style/header.css';
+import Logo from '../../../assets/logo.png';
+import '../../../assets/style/header.css';
 
 export default class Header extends Component {
     constructor(props) {
@@ -97,7 +97,7 @@ export default class Header extends Component {
                 <Grid>
                     <Grid.Row only="computer" className="full-size">
                         <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
-                            <Menu.Item as={Link} to='/' style={{"paddingLeft": "10px", "paddingRight": "10px"}}>
+                            <Menu.Item as={Link} to={{pathname: '/', state: { fromLink: true }}} style={{"paddingLeft": "10px", "paddingRight": "10px"}}>
                                 <Image
                                     src={Logo}
                                     size="small"
@@ -116,7 +116,7 @@ export default class Header extends Component {
 
                     <Grid.Row only="mobile tablet" className="full-size">
                         <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
-                            <Menu.Item as={Link} to='/' style={{"paddingLeft": "6px", "paddingRight": "px"}}>
+                            <Menu.Item as={Link} to={{pathname: '/', state: { fromLink: true }}} style={{"paddingLeft": "6px"}}>
                                 <Image
                                     src={Logo}
                                     size="tiny"

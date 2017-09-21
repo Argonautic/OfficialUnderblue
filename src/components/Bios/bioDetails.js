@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Image, Segment } from 'semantic-ui-react';
 
-import PortraitAnu from '../../../public/BioAssets/PortraitAnu.jpg'
-import PortraitJon from '../../../public/BioAssets/PortraitJon.jpg'
-import PortraitKim from '../../../public/BioAssets/PortraitKim.jpg'
-import PortraitSimon from '../../../public/BioAssets/PortraitSimon.jpg'
-import { bioAnu, bioJon, bioKim, bioSimon, bioIlvi } from '../../../public/BioAssets/IndividualBios';
+import PortraitAnu from '../../../assets/BioAssets/PortraitAnu.jpg'
+import PortraitJon from '../../../assets/BioAssets/PortraitJon.jpg'
+import PortraitKim from '../../../assets/BioAssets/PortraitKim.jpg'
+import PortraitSimon from '../../../assets/BioAssets/PortraitSimon.jpg'
+import { bioAnu, bioJon, bioKim, bioSimon, bioIlvi } from '../../../assets/BioAssets/IndividualBios';
 
 export default class BioDetails extends Component {
     constructor(props) {

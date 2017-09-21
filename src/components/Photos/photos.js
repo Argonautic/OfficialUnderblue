@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'semantic-ui-react';
 
-import '../../../public/style/photos.css';
+import '../../../assets/style/photos.css';
 
 export default class Photos extends Component {
     render() {

@@ -1,13 +1,21 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const VENDOR_LIBS = [
+    'react', 'react-dom', 'react-router', 'react-router-dom', 'semantic-ui-react'
+];
+
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        bundle: './src/index.js',
+        vendor: VENDOR_LIBS
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        filename: '[name].[chunkhash].js',
         publicPath: '/'
     },
     module: {
@@ -39,6 +47,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html',
         }),
+        new webpack.optimize.CommonsChunkPlugin({
+            // if there are common files in vendor and bundle, only include the ones in vendor
+            names: ['vendor', 'manifest']
+        })
     ],
     devServer: {
         port: 8080,

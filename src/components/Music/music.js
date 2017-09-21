@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Header, Item } from 'semantic-ui-react';
 
-import { lyricsSuperconductor, lyricsMidnightBlue, lyricsBrain, lyricsTrain, lyricsSeaMachine} from '../../../public/MusicAssets/lyrics';
+import { lyricsSuperconductor, lyricsMidnightBlue, lyricsBrain, lyricsTrain, lyricsSeaMachine} from '../../../assets/MusicAssets/lyrics';
 
-import '../../../public/style/music.css';
+import '../../../assets/style/music.css';
 
 export default class Music extends Component {
     constructor(props) {

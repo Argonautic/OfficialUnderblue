@@ -1,6 +1,3 @@
-/*import Perf from 'react-addons-perf';
-Perf.start();*/
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
@@ -15,7 +12,7 @@ import Photos from './components/Photos/photos';
 import Videos from './components/Videos/videos';
 import StockBackground from './components/Shared/stockBackground';
 
-import '../public/style/style.css';
+import '../assets/style/style.css';
 import StaticOverlay from "./components/Shared/staticOverlay";
 
 ReactDOM.render(
@@ -36,6 +33,3 @@ ReactDOM.render(
         </div>
     </BrowserRouter>
     , document.querySelector('.container'));
-
-/*Perf.stop();
-Perf.printWasted();*/

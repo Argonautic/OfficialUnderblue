@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import StockBackground from '../Shared/stockBackground';
 import StaticOverlay from '../Shared/staticOverlay';
 
-import '../../../public/style/welcome.css';
+import '../../../assets/style/welcome.css';
 
 export default class Landing extends Component {
     constructor(props) {
@@ -17,7 +17,6 @@ export default class Landing extends Component {
 
     componentDidMount() {
         setTimeout(() => {
-            console.log('Welcome out');
             this.setState({ opacity: 0 });
         }, 2000)
     }

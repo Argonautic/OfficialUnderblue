@@ -3,12 +3,12 @@ import { Container, Image, Segment } from 'semantic-ui-react';
 
 import BioImage from './bioImage';
 
-import PortraitAnu from '../../../public/BioAssets/PortraitAnu1x1.jpg'
-import PortraitJon from '../../../public/BioAssets/PortraitJon1x1.jpg'
-import PortraitKim from '../../../public/BioAssets/PortraitKim1x1.jpg'
-import PortraitSimon from '../../../public/BioAssets/PortraitSimon1x1.jpg'
-import { bioAnu, bioJon, bioKim, bioSimon, bioIlvi } from '../../../public/BioAssets/IndividualBios';
-import '../../../public/style/bios.css';
+import PortraitAnu from '../../../assets/BioAssets/PortraitAnu1x1.jpg'
+import PortraitJon from '../../../assets/BioAssets/PortraitJon1x1.jpg'
+import PortraitKim from '../../../assets/BioAssets/PortraitKim1x1.jpg'
+import PortraitSimon from '../../../assets/BioAssets/PortraitSimon1x1.jpg'
+import { bioAnu, bioJon, bioKim, bioSimon, bioIlvi } from '../../../assets/BioAssets/IndividualBios';
+import '../../../assets/style/bios.css';
 
 export default class Bios extends Component {
     constructor(props) {
@@ -18,7 +18,7 @@ export default class Bios extends Component {
         this.bandBios.set("Anu McPherson", {src: PortraitAnu, bio: bioAnu});
         this.bandBios.set("Jonathan Zhou", {src: PortraitJon, bio: bioJon});
         this.bandBios.set("Kimberly Torres", {src: PortraitKim, bio: bioKim});
-        this.bandBios.set("Simon Cheong", {src: PortraitSimon, bio: bioSimon});
+        this.bandBios.set("Simon Luk", {src: PortraitSimon, bio: bioSimon});
 
         this.state = {
             bioMember: "Anu McPherson",
