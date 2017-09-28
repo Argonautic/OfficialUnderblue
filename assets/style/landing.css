@@ -1,12 +1,23 @@
-#landing {
+.blur-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    -webkit-filter: none;
+    filter: none;
+
 	position: fixed;
 	top: 0;
 	z-index: -10;
 	height: 100vh;
 	width: 100vw;
-	background-image: url("../Rockwood-Live.jpg");
-	background-size:     cover;
-    background-repeat:   no-repeat;
-    background-position: center center;
-	transition: 0.5s;
+}
+
+.image-loaded {
+    -webkit-transition: background-image 1s;
+    transition: background-image 1s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
 }

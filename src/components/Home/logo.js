@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import { Image } from 'semantic-ui-react';
+import { Image, Transition } from 'semantic-ui-react';
 
-import Logo from '../../../assets/logo.png';
+import BandLogo from '../../../assets/logo.png';
 import '../../../assets/style/logo.css'
 
-export default class Landing extends Component {
-    /*constructor(props) {
+export default class Logo extends Component {
+    constructor(props) {
         super(props);
 
+        console.log('from Logo ' + this.props.fromLink);
         this.state = {
-            opacity: 1
+            visible: this.props.fromLink
         }
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            console.log('logo out');
-            this.setState({ opacity: 0 });
-        }, 2000);
-    }*/
+        if (this.state.visible === false) {
+            this.setState({visible: true});
+        }
+    }
 
     render() {
         return (
-           <Image id="band-name" src={Logo} centered size="medium" />
+            <Transition visible={this.state.visible} animation="scale" duration={500}>
+                <Image id="band-name" src={BandLogo} centered size="medium" />
+            </Transition>
         );
     }
 }

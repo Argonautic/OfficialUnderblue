@@ -14,8 +14,8 @@ export default class Home extends Component {
         return (
             <div>
                 {renderWelcome && <Welcome />}
-                <Logo />
-                <Landing />
+                <Logo fromLink={!renderWelcome}/>
+                <Landing fromLink={!renderWelcome} />
                 <Overlay />
                 <HomeSoundCloud />
 

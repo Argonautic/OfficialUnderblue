@@ -15,3 +15,7 @@
     line-height: 1.4;
     font-size: 20px;
 }
+
+img {
+    cursor: pointer;
+}
