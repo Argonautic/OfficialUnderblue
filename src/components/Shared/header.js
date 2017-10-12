@@ -12,12 +12,15 @@ export default class Header extends Component {
         this.state = {
             sidebarWidth: 0,
             backgroundColor: 'rgba(255, 255, 255, 0)',
+            stackedHeader: window.innerWidth < 920
         };
 
         this.toggleSidebar = this.toggleSidebar.bind(this);
         this.toggleHeaderOpacity = this.toggleHeaderOpacity.bind(this);
+        this.onResize = this.onResize.bind(this);
 
         window.addEventListener("scroll", this.toggleHeaderOpacity);
+        window.addEventListener("resize", this.onResize);
     }
 
     toggleSidebar() {
@@ -58,7 +61,16 @@ export default class Header extends Component {
         }
     }
 
+    onResize() {
+        if (window.innerWidth < 920 && !this.state.stackedHeader) {
+            this.setState({ stackedHeader: true });
+        } else if (window.innerWidth >= 920 && this.state.stackedHeader) {
+            this.setState({ stackedHeader: false });
+        }
+    }
+
     render() {
+        const { stackedHeader } = this.state;
 
         const navItems = [
             { key: 'bios', name: 'Bios', icon: "users" },
@@ -70,45 +82,30 @@ export default class Header extends Component {
 
         return (
             <div id="header">
-                <Grid>
-                    <Grid.Row only="computer" className="full-size">
-                        <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
-                            <Menu.Item as={Link} to={{pathname: '/', state: { fromLink: true }}} style={{"paddingLeft": "10px", "paddingRight": "10px"}}>
-                                <Image
-                                    src={Logo}
-                                    size="small"
-                                />
-                            </Menu.Item>
+                <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
+                    <Menu.Item as={Link}
+                               to={{pathname: '/', state: { fromLink: true }}}
+                               style={{"paddingLeft": "10px", "paddingRight": "10px"}}
+                    >
+                        <Image src={Logo} size={stackedHeader ? "tiny" : "small"} />
+                    </Menu.Item>
 
-                            {this.getSocialIcons('large')}
+                    {this.getSocialIcons(stackedHeader ? 'small' : 'large')}
 
-                            <Menu.Menu position="right">
-                                {navItems.map(item => {
-                                    return <Menu.Item className="menu-item" as={Link} to={item.key} key={item.key} name={item.name} />
-                                })}
-                            </Menu.Menu>
-                        </Menu>
-                    </Grid.Row>
+                    {stackedHeader ?
+                        <Menu.Item position="right" style={{"verticalAlign": "middle"}}>
+                            <Button icon onClick={this.toggleSidebar} style={{ backgroundColor: "rgba(255, 255, 255, 0)"}}>
+                                <Icon inverted size="small" name="content" />
+                            </Button>
+                        </Menu.Item> :
 
-                    <Grid.Row only="mobile tablet" className="full-size">
-                        <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
-                            <Menu.Item as={Link} to={{pathname: '/', state: { fromLink: true }}} style={{"paddingLeft": "6px"}}>
-                                <Image
-                                    src={Logo}
-                                    size="tiny"
-                                />
-                            </Menu.Item>
-
-                            {this.getSocialIcons('small')}
-
-                            <Menu.Item position="right" style={{"verticalAlign": "middle"}}>
-                                <Button icon onClick={this.toggleSidebar} style={{ backgroundColor: "rgba(255, 255, 255, 0)"}}>
-                                    <Icon inverted size="small" name="content" />
-                                </Button>
-                            </Menu.Item>
-                        </Menu>
-                    </Grid.Row>
-                </Grid>
+                        <Menu.Menu position="right">
+                            {navItems.map(item => {
+                                return <Menu.Item className="menu-item" as={Link} to={item.key} key={item.key} name={item.name} />
+                            })}
+                        </Menu.Menu>
+                    }
+                </Menu>
 
                 <div id="mySidenav" className="sidenav" style={{'width': this.state.sidebarWidth}}>
                     {navItems.map(item => {
