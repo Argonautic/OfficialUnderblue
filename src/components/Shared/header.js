@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Menu, Image, Grid, Icon, Button } from 'semantic-ui-react';
+import { Menu, Image, Icon, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 import Logo from '../../../assets/logo.png';
+import Sidebar from './sidebar';
 import '../../../assets/style/header.css';
 
 export default class Header extends Component {
@@ -83,10 +84,7 @@ export default class Header extends Component {
         return (
             <div id="header">
                 <Menu secondary className="top-menu" inverted fixed="top" style={{ backgroundColor: this.state.backgroundColor, opacity: this.state.opacity }}>
-                    <Menu.Item as={Link}
-                               to={{pathname: '/', state: { fromLink: true }}}
-                               style={{"paddingLeft": "10px", "paddingRight": "10px"}}
-                    >
+                    <Menu.Item id="header-logo" as={Link} to={{pathname: '/', state: { fromLink: true }}}>
                         <Image src={Logo} size={stackedHeader ? "tiny" : "small"} />
                     </Menu.Item>
 
@@ -107,11 +105,12 @@ export default class Header extends Component {
                     }
                 </Menu>
 
-                <div id="mySidenav" className="sidenav" style={{'width': this.state.sidebarWidth}}>
+                <Sidebar navItems={navItems} sidebarWidth={this.state.sidebarWidth} />
+                {/*<div id="mySidenav" className="sidenav" style={{'width': this.state.sidebarWidth}}>
                     {navItems.map(item => {
                         return <Link to={item.key} key={item.key}><Icon name={item.icon} />{item.name}</Link>
                     })}
-                </div>
+                </div>*/}
             </div>
         );
     }

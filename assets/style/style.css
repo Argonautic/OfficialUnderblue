@@ -11,6 +11,10 @@
     width: 50%;
 }
 
+#content {
+	margin-top: 80px;
+}
+
 .top-margin {
 	margin-Top: 40px;
 }

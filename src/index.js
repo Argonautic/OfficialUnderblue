@@ -11,9 +11,9 @@ import Tour from './components/Tour/tour';
 import Photos from './components/Photos/photos';
 import Videos from './components/Videos/videos';
 import StockBackground from './components/Shared/stockBackground';
+import StaticOverlay from "./components/Shared/staticOverlay";
 
 import '../assets/style/style.css';
-import StaticOverlay from "./components/Shared/staticOverlay";
 
 ReactDOM.render(
     <BrowserRouter>
@@ -21,14 +21,18 @@ ReactDOM.render(
             <StockBackground />
             <StaticOverlay />
             <Route component={Header} />
-            <Switch>
-                <Route path="/bios" component={Bios} />
-                <Route path="/music" component={Music} />
-                <Route path="/tour" component={Tour} />
-                <Route path="/photos" component={Photos} />
-                <Route path="/videos" component={Videos} />
-                <Route path="/" component={Home} />
-            </Switch>
+
+            <div id="content">
+                <Switch>
+                    <Route path="/bios" component={Bios} />
+                    <Route path="/music" component={Music} />
+                    <Route path="/tour" component={Tour} />
+                    <Route path="/photos" component={Photos} />
+                    <Route path="/videos" component={Videos} />
+                    <Route path="/" component={Home} />
+                </Switch>
+            </div>
+
             <Route component={Footer} />
         </div>
     </BrowserRouter>
