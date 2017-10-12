@@ -12,7 +12,7 @@ export default class Home extends Component {
         this.props.location.state ? renderWelcome = false : renderWelcome = true;
 
         return (
-            <div>
+            <div id="test">
                 {renderWelcome && <Welcome />}
                 <Logo fromLink={!renderWelcome}/>
                 <Landing fromLink={!renderWelcome} />

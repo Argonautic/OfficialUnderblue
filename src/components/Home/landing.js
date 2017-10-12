@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import RockwoodNormal from '../../../assets/Rockwood-Live.jpg';
+import RockwoodNormal from '../../../assets/Rockwood-Live-60.jpg';
 import '../../../assets/style/landing.css';
 
 export default class Landing extends Component {

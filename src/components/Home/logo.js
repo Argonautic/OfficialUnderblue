@@ -8,7 +8,6 @@ export default class Logo extends Component {
     constructor(props) {
         super(props);
 
-        console.log('from Logo ' + this.props.fromLink);
         this.state = {
             visible: this.props.fromLink
         }

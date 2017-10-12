@@ -12,10 +12,6 @@ import SleepingBo from '../../../assets/landingPhotos/SleepingBo.jpg';
 import '../../../assets/style/homeSoundCloud.css';
 
 export default class HomeSoundCloud extends Component {
-    testLog() {
-        console.log('hi');
-    }
-
     render() {
         return (
             <Container id="home-soundcloud">
