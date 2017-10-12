@@ -9,21 +9,15 @@ export default class Header extends Component {
     constructor(props) {
         super(props);
 
-        const isHomepage = this.props.match.url === '/';
-
         this.state = {
-            isHomepage,
             sidebarWidth: 0,
-            backgroundColor: isHomepage ? 'rgba(255, 255, 255, 0)' : "#090909",
-            opacity: isHomepage ? null : '0.8',
+            backgroundColor: 'rgba(255, 255, 255, 0)',
         };
 
         this.toggleSidebar = this.toggleSidebar.bind(this);
         this.toggleHeaderOpacity = this.toggleHeaderOpacity.bind(this);
 
-        if (isHomepage) {
-            window.addEventListener("scroll", this.toggleHeaderOpacity);
-        }
+        window.addEventListener("scroll", this.toggleHeaderOpacity);
     }
 
     toggleSidebar() {
@@ -48,24 +42,6 @@ export default class Header extends Component {
                 );
             })
         );
-    }
-
-    componentWillReceiveProps(nextProps) {
-        if (this.state.isHomepage && nextProps.location.pathname !== '/') {
-            window.removeEventListener('scroll', this.toggleHeaderOpacity);
-            this.setState({
-                isHomepage: false,
-                backgroundColor: "#090909",
-                opacity: '0.8',
-            });
-        } else if (!this.state.isHomepage && nextProps.location.pathname === '/') {
-            window.addEventListener('scroll', this.toggleHeaderOpacity);
-            this.setState ({
-                isHomepage: true,
-                backgroundColor: 'rgba(255, 255, 255, 0)',
-                opacity: null,
-            })
-        }
     }
 
     toggleHeaderOpacity() {
