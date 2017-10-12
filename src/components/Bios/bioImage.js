@@ -14,7 +14,7 @@ export default class BioImage extends Component {
 
     render() {
         return (
-            <Image src={this.props.src} onClick={this._onClick} />
+            <Image src={this.props.src} onClick={this._onClick} disabled={!this.props.active} />
         )
     }
 }

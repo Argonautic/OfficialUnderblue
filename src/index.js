@@ -20,7 +20,7 @@ ReactDOM.render(
         <div id="site">
             <StockBackground />
             <StaticOverlay />
-            <Route component={Header} />
+            <Header />
 
             <div id="content">
                 <Switch>
@@ -33,7 +33,7 @@ ReactDOM.render(
                 </Switch>
             </div>
 
-            <Route component={Footer} />
+            <Footer />
         </div>
     </BrowserRouter>
     , document.querySelector('.container'));

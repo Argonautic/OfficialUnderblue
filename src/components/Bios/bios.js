@@ -46,6 +46,7 @@ export default class Bios extends Component {
                 name={bio[0]}
                 src={bio[1].src}
                 onImageClick={this.onImageClick}
+                active={this.state.bioMember === bio[0]}
             />
         });
     }
