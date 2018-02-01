@@ -3,11 +3,14 @@ import { Container, Image, Segment } from 'semantic-ui-react';
 
 import BioImage from './bioImage';
 
-import PortraitAnu from '../../../assets/BioAssets/PortraitAnu1x1.jpg'
-import PortraitJon from '../../../assets/BioAssets/PortraitJon1x1.jpg'
-import PortraitKim from '../../../assets/BioAssets/PortraitKim1x1.jpg'
-import PortraitSimon from '../../../assets/BioAssets/PortraitSimon1x1.jpg'
-import { bioAnu, bioJon, bioKim, bioSimon, bioIlvi } from '../../../assets/BioAssets/IndividualBios';
+import PortraitAnu from '../../../assets/BioAssets/PortraitAnu.jpg';
+import PortraitJon from '../../../assets/BioAssets/PortraitJon.jpg';
+import PortraitKim from '../../../assets/BioAssets/PortraitKim.jpg';
+import PortraitSimon from '../../../assets/BioAssets/PortraitSimon.jpg';
+import PortraitIlvi from '../../../assets/BioAssets/PortraitIlvi.jpg';
+import PortraitAaron from '../../../assets/BioAssets/PortraitAaron.jpg';
+
+import { bioAnu, bioJon, bioKim, bioSimon, bioIlvi, bioAaron } from '../../../assets/BioAssets/IndividualBios';
 import '../../../assets/style/bios.css';
 
 export default class Bios extends Component {
@@ -16,9 +19,11 @@ export default class Bios extends Component {
 
         this.bandBios = new Map();
         this.bandBios.set("Anu McPherson", {src: PortraitAnu, bio: bioAnu});
+        this.bandBios.set("Ilvi Calderon", {src: PortraitIlvi, bio: bioIlvi});
         this.bandBios.set("Jonathan Zhou", {src: PortraitJon, bio: bioJon});
         this.bandBios.set("Kimberly Torres", {src: PortraitKim, bio: bioKim});
         this.bandBios.set("Simon Luk", {src: PortraitSimon, bio: bioSimon});
+        this.bandBios.set("Aaron Cross", {src: PortraitAaron, bio: bioAaron});
 
         this.state = {
             bioMember: "Anu McPherson",
@@ -71,7 +76,7 @@ export default class Bios extends Component {
                         </p>
                     </div>
 
-                    <Image.Group size="small" style={{marginTop: "10px"}}>
+                    <Image.Group size="medium" style={{marginTop: "10px"}}>
                         {this.renderImages()}
                     </Image.Group>
 

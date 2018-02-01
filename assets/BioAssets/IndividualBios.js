@@ -25,9 +25,15 @@ export const bioJon = "Jon Zhou plays the pedalboard for Underblue, but uses a g
     "beautiful works of art that you get to hear on your Friday nights. He also acts as band mom in rehearsals, where he " +
     "keeps the band focused under threat of disappointment. And ladies, he's single.";
 
-export const bioIlvi = "Ilvi Calderon is the newest member of the Underblue pack, discovered by the band one misty August " +
-    "afternoon. He's Underblue's keyboardist by day, and memelord by night. When Ilvi hits the keys, you know you're " +
-    "getting something good, whether it be a soulful progression that sounds like something right from Nujabes, to " +
-    "a dark jazz vibe that screams for the hottest verse of 2017. His appreciation and knowledge of seemingly all " +
-    "genres fits right into the Underblue philosophy, and he brings an unexpected edge that helps Underblue stand out from a " +
-    "your grandpa's rock band. He grows a pretty sick beard on his free time.";
+export const bioIlvi = "Ilvi Calderon is the newest official member of the Underblue pack, discovered by the band one misty August " +
+    "afternoon. He's Underblue's keyboardist by day, memelord by night, and all around swell guy. When Ilvi hits the keys, you're " +
+    "fated to getting something creative, whether it be a soulful piano progression that sounds like something right from Nujabes, to " +
+    "a dark jazz vibe that screams for the hottest verse of 2018. His appreciation and knowledge of seemingly all genres fits " +
+    "right into the Underblue philosophy, and his backlog of musical ideas is limitless. He grows a pretty sick beard on his free time.";
+
+export const bioAaron = "The unofficial sixth member and the hidden gem of Harlem, Aaron was scouted by Underblue in the mystical " +
+    "basement of Silvanas bar during the monthly Poet Will Be Televised open mic. Little did anyone know he would be the catalyst that " +
+    "transformed Underblue from shitty indie band into ultra indie hegemon 9000. With his trusty violin, Aaron creates melodies and counterpoints " +
+    "that turn any rock song, slow waltz, or funk jam into a work of modern art. His entry into the band coincided with such innovations " +
+    "as – four part harmonies, standardized sound checks, decent music, and full band acoustic videos. He has been waiting for Ilvi " +
+    "to take him to a Chinese buffet for some time, now.";
