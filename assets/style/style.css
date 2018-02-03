@@ -7,8 +7,8 @@
 
 .center {
 	position: relative;
-    margin: auto;
-    width: 50%;
+	margin: auto;
+	width: 50%;
 }
 
 #content {
@@ -20,6 +20,21 @@
 }
 
 .white-color {
-    font-family: "Open Sans", sans-serif !important;
-    color: floralwhite !important;
+	font-family: "Open Sans", sans-serif !important;
+	color: floralwhite !important;
+}
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }

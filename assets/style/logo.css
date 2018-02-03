@@ -1,7 +1,13 @@
 #band-name {
 	z-index: 30;
 	width: 50%;
-	max-width: 250px;
 	margin-top: 35vh;
 	transition: 1s;
+	max-width: 600px;
+}
+
+@media screen and (max-width: 768px) {
+	#band-name {
+		max-width: 250px;
+	}
 }

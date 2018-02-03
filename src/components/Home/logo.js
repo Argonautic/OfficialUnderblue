@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Image, Transition } from 'semantic-ui-react';
 
-import BandLogo from '../../../assets/logo.png';
+import BandLogo from '../../../assets/newLogo.png';
 import '../../../assets/style/logo.css'
 
 export default class Logo extends Component {
@@ -22,7 +22,7 @@ export default class Logo extends Component {
     render() {
         return (
             <Transition visible={this.state.visible} animation="scale" duration={500}>
-                <Image id="band-name" src={BandLogo} centered size="medium" />
+                <Image id="band-name" src={BandLogo} centered size="large" />
             </Transition>
         );
     }

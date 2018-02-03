@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Menu, Image, Icon, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-import Logo from '../../../assets/logo.png';
+import Logo from '../../../assets/newLogo.png';
 import Sidebar from './sidebar';
 import '../../../assets/style/header.css';
 
