@@ -19,3 +19,9 @@
 img {
     cursor: pointer !important;
 }
+
+@media screen and (max-width: 768px) {
+	#band-bio, #bio-box {
+		font-size: 16px;
+	}
+}

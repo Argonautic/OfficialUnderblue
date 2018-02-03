@@ -26,6 +26,7 @@ export default class Bios extends Component {
         this.bandBios.set("Aaron Cross", {src: PortraitAaron, bio: bioAaron});
 
         this.state = {
+            bioSize: window.innerWidth < 768 ? "tiny" : "medium",
             bioMember: "Anu McPherson",
             bioText: bioAnu
         };
@@ -76,7 +77,7 @@ export default class Bios extends Component {
                         </p>
                     </div>
 
-                    <Image.Group size="medium" style={{marginTop: "10px"}}>
+                    <Image.Group size={this.state.bioSize} style={{marginTop: "10px"}}>
                         {this.renderImages()}
                     </Image.Group>
 
