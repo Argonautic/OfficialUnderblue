@@ -4,7 +4,7 @@
 	  opacity: 0.9;
 	  padding-top: 45px;
     position: fixed; /* Stay in place */
-    z-index: 18; /* Stay on top */
+    z-index: 35; /* Stay on top */
     top: 0;
     right: 0;
     background-color: #111; /* Black*/
